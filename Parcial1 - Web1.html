@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Perfil SPA - Parcial 1</title>
+  <meta name="description" content="Simulación de perfil (SPA) — Vanilla JS, Flexbox y Grid.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="header" role="banner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">FB</div>
+        <div>
+          <h1>MiRed</h1>
+          <p>Simulación de perfil - SPA</p>
+        </div>
+      </div>
+
+      <div class="search" role="search">
+        <label for="q" class="sr-only" style="position:absolute; left:-9999px">Buscar</label>
+        <input id="q" placeholder="Buscar en MiRed... (ej: amigos, fotos, publicaciones)" autocomplete="off">
+      </div>
+
+      <div class="header-actions" aria-hidden="false">
+        <button title="Notificaciones">🔔</button>
+        <button title="Mensajes">✉️</button>
+        <button title="Configuración">⚙️</button>
+      </div>
+    </header>
+
+    <div class="main-grid">
+      <aside class="profile" aria-label="Perfil de usuario">
+        <div class="avatar">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&q=60" alt="Avatar de usuario">
+          <div>
+            <div class="username">Daniel Angulo</div>
+            <div class="user-bio">Estudiante · Apasionado por la física y el desarrollo web</div>
+          </div>
+        </div>
+
+        <div class="profile-stats" role="list">
+          <div class="stat" role="listitem"><strong>324</strong><div style="font-size:0.8rem">Amigos</div></div>
+          <div class="stat" role="listitem"><strong>89</strong><div style="font-size:0.8rem">Fotos</div></div>
+          <div class="stat" role="listitem"><strong>56</strong><div style="font-size:0.8rem">Boxes</div></div>
+        </div>
+
+        <div style="margin-top:14px">
+          <button id="editProfile" style="width:100%; padding:10px; border-radius:10px; border:0; background:var(--accent); color:white">Editar perfil</button>
+        </div>
+      </aside>
+
+      <main class="content" id="app" role="main">
+        <div class="card">
+          <nav class="profile-nav" role="navigation" aria-label="Navegación del perfil">
+            <button data-route="muro" class="active">Muro</button>
+            <button data-route="info">Info</button>
+            <button data-route="photos">Photos</button>
+            <button data-route="boxes">Boxes</button>
+          </nav>
+
+          <section id="view" aria-live="polite">
+            <!-- El contenido de cada sección se inyecta desde JavaScript -->
+          </section>
+        </div>
+
+        <footer>
+          Hecho con Vanilla JavaScript para el parcial. Usa Flexbox y Grid. HTML semántico.
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

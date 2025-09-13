@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open Parcial1 - Web1.html",
+            "file": "c:\\Users\\Daniel\\Desktop\\Parcial1-web1-Angulo-407340\\Parcial1 - Web1.html"
+        }
+    ]
+}
